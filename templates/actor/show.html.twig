@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail d'un acteur{% endblock %}
+
+{% block body %}
+    <h1>Nom de l'acteur:</h1>
+    {{ actor.name }}
+        <h1>Séries associées à l'acteur: </h1>
+        		{% for program in actor.programs %}
+    {{ program.title }}
+    {% endfor %}
+{% endblock %}

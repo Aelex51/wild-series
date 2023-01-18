@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des acteurs{% endblock %}
+
+{% block body %}
+    {% for actor in actors %}
+    <h1>Nom de l'acteur:</h1>
+    {{ actor.name }}
+    {% endfor %}
+{% endblock %}

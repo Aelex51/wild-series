@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+        <h1>Laissez un commentaire</h1>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <p>Email: {{ app.user.email }}</p>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button type="submit">submit</button>
+            {{ form_end(form) }}
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
